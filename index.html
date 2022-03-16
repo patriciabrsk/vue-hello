@@ -18,12 +18,17 @@
 </head>
 <body>
     <main id="app" class="container d-flex justify-content-center">
-        <div class="row">
-            <h1 class="mt-5 col-12 text-center">Welcome to Vue.js</h1>
-            <div class="col d-flex flex-column justify-content-center">
-                <span class="mt-3">Your text will be displayed here:</span>
-                <h1 v-model="title" type="text" class="mt-3">{{ message }}</h1>
-                <textarea v-model="message" placeholder="Type something here" class="mt-3"></textarea>
+        <div class="row d-flex justify-content-center">
+            <h1 class="mt-5 col-12 text-center mb-5">{{ title }}</h1>
+            <div id="text-display" class="col-5 d-flex flex-column">
+                <span>Your text will be displayed here:</span>
+                <h1 type="text" class="mt-3">{{ message }}</h1>
+                <textarea v-model="message" placeholder="Type something..." class="mt-5"></textarea>
+            </div>
+            <div id="image-display" class="col-5 d-flex flex-column">
+                <input v-model="src" v-on:keyup.enter="showImage()" placeholder="Paste an img url">
+                <span class="my-3">Your image will be displayed here:</span>
+                <img :src="src" alt="">
             </div>
         </div>
     </main>

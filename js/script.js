@@ -9,7 +9,9 @@ const app = new Vue(
     {
         el: '#app',
         data: {
-            message: ''
+            title: 'Welcome to Vue.js',
+            message: '',
+            src: ''
         }
     }
 );
