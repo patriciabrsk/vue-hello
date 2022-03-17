@@ -26,7 +26,7 @@
                 <textarea v-model="message" placeholder="Type something..." class="mt-5"></textarea>
             </div>
             <div id="image-display" class="col-5 d-flex flex-column">
-                <input v-model="src" v-on:keyup.enter="showImage()" placeholder="Paste an img url">
+                <input v-model="src" placeholder="Paste an img url">
                 <span class="my-3">Your image will be displayed here:</span>
                 <img :src="src" alt="">
             </div>
